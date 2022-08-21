@@ -6,7 +6,7 @@ Name:           python-%{srcname}
 Version:        1.2.1
 Release:        1%{?dist}
 Summary:        Python3 module for creating ICAP clients
-License:        GPLv3
+License:        GPL-3.0-only
 URL:            https://github.com/fim/icapclient3
 
 Source0:        %{pypi_source}
@@ -49,12 +49,6 @@ cp %{SOURCE1} .
 
 %install
 %py3_install
-
-%check
-## use what your upstream is using
-%{__python3} setup.py test
-#%{__python3} -m pytest
-#%{__python3} -m nose
 
 %files -n  python%{python3_pkgversion}-%{srcname}
 %license LICENSE
