@@ -4,7 +4,7 @@
 
 Name:           python-%{srcname}
 Version:        1.2.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Python3 module for creating ICAP clients
 License:        GPL-3.0-only
 URL:            https://github.com/fim/icapclient3
@@ -28,7 +28,6 @@ protocol.
 
 %package -n python%{python3_pkgversion}-%{srcname}
 Summary:        %{summary}
-%{?python_provide:%python_provide python3-%{srcname}}
 
 %description -n python%{python3_pkgversion}-%{srcname}
 A Python3 module for creating ICAP clients. The module API is somewhat inspired
@@ -57,5 +56,8 @@ cp %{SOURCE1} .
 %{python3_sitearch}/icapclient.cpython-%{python3_version_nodots}-%{_arch}-linux-gnu.so
 
 %changelog
+* Tue Aug 22 2023 Simone Caronni <negativo17@gmail.com> - 1.2.1-2
+- Review fixes.
+
 * Sat Aug 20 2022 Simone Caronni <negativo17@gmail.com> - 1.2.1-1
 - First build.
